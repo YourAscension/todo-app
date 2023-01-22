@@ -3,6 +3,7 @@ import Input from "../../UI/Input/Input";
 import Button from "../../UI/Button/Button";
 import styles from "./TodoForm.module.css";
 import { setTodo, setTest } from "../../../slices/TodoActions";
+import { setSearch } from "../../../slices/TodoFilter";
 import { useDispatch } from "react-redux";
 import ToolTip from "../../UI/ToolTip/ToolTip";
 import { useTooltip } from "../../../hooks/useTooltip";
@@ -19,6 +20,7 @@ function TodoForm() {
       showTooltip();
     } else {
       dispatch(setTodo(input));
+      dispatch(setSearch(""));
       setInput("");
     }
   };

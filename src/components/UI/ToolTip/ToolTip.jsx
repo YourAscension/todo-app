@@ -3,10 +3,11 @@ import styles from "./ToolTip.module.css";
 
 function ToolTip({ children, ...props }) {
   const { target, isActive } = props;
+
   return isActive ? (
     <div
       className={[styles.tooltip, styles.bottom].join(" ")}
-      style={{ top: target.bottom + 2, left: target.left }}
+      style={{ top: target.bottom + 2, left: target.x + target.width / 3 }}
     >
       <div className={styles.tooltipArrow} />
       <div className={styles.tooltipLabel}>{children}</div>

@@ -5,20 +5,24 @@ import styles from "./TodoFilter.module.css";
 import Checkbox from "../../UI/Checkbox/Checkbox";
 import ToolTip from "../../UI/ToolTip/ToolTip";
 import { useTooltip } from "../../../hooks/useTooltip";
+import { useDispatch, useSelector } from "react-redux";
+import { setSearch, setIsUncompleted } from "../../../slices/TodoFilter";
 
 function TodoFilter() {
-  const searchInputRef = React.useRef();
-  const [isActive, coords, showTooltip] = useTooltip(searchInputRef, 3000);
-  React.useEffect(() => {
-    showTooltip();
-  }, []);
+  const dispatch = useDispatch();
+  const { search, isUncompleted } = useSelector((state) => state.filter.filter);
+
   return (
-    <form className={styles.filterForm}>
-      <ToolTip isActive={isActive} target={coords}>
-        Найдите задачу
-      </ToolTip>
-      <Input ref={searchInputRef} type="text" icon={searchIcon} />
-      <Checkbox>Невыполненые</Checkbox>
+    <form onSubmit={(e) => e.preventDefault()} className={styles.filterForm}>
+      <Input
+        value={search}
+        onInput={(e) => dispatch(setSearch(e.target.value))}
+        type="text"
+        icon={searchIcon}
+      />
+      <Checkbox checked={isUncompleted} onChange={() => dispatch(setIsUncompleted())}>
+        Невыполненые
+      </Checkbox>
     </form>
   );
 }

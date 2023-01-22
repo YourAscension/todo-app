@@ -2,7 +2,7 @@ import React from "react";
 
 const useTooltip = (target, time) => {
   const [isActive, setActive] = React.useState("");
-  const [coords, setCoords] = React.useState("");
+  const [coords, setCoords] = React.useState({});
 
   const showTooltip = () => {
     setCoords(target.current.getBoundingClientRect());
