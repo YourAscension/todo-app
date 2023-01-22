@@ -1,0 +1,44 @@
+.button {
+  padding: 5px 10px;
+  cursor: pointer;
+  background: none;
+  border: 1px solid transparent;
+}
+
+.primary {
+  background: rgb(0, 136, 255);
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.primary:hover {
+  outline: 2px solid rgba(0, 136, 255, 0.5);
+}
+
+.primary:active {
+  background: rgb(0, 136, 255, 0.7);
+}
+
+.primary:focus {
+  outline: 2px solid rgba(0, 136, 255, 0.5);
+}
+
+.delete {
+  background: transparent;
+  border: 1px solid red;
+  color: red;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.delete:hover {
+  background: red;
+  color: white;
+}
+
+.delete:active {
+  background: rgba(255, 0, 0, 0.495);
+  border: 1px solid rgba(255, 0, 0, 0.495);
+  color: white;
+}

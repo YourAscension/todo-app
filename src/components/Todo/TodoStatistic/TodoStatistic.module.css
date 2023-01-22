@@ -1,0 +1,22 @@
+.todoStatistic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.statisticContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.todoStatisticIcon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.todoStatisticIcon > span {
+  font-size: 20px;
+}

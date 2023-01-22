@@ -1,0 +1,25 @@
+.todoItemContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  gap: 10px;
+}
+
+.itemTitle {
+  display: flex;
+  align-items: center;
+}
+
+.itemTitleText {
+  font-size: 16px;
+  max-width: 450px;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.509);
+}
