@@ -1,0 +1,25 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pageButton {
+  padding: 5px 10px;
+  background: transparent;
+  border: 1px solid rgba(129, 128, 128, 0.499);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.pageButton:hover:not(.active) {
+  border: 1px solid rgb(0, 136, 255, 0.5);
+}
+
+.pageButton:active:not(.active) {
+  border: 1px solid rgb(0, 136, 255);
+}
+
+.active {
+  border: 1px solid green;
+}

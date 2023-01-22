@@ -1,11 +1,11 @@
 import React from "react";
 import Button from "../../UI/Button/Button";
 import Checkbox from "../../UI/Checkbox/Checkbox";
-import styles from "./TodoItem.module.css";
+import styles from "./Item.module.css";
 import { useDispatch } from "react-redux";
-import { deleteTodo, toggleTodoCompleted } from "../../../slices/TodoActions";
+import { deleteTodo, toggleTodoCompleted } from "../../../slices/todo-actions";
 
-function TodoItem(props) {
+function Item(props) {
   const { todo, index } = props;
   const dispatch = useDispatch();
 
@@ -39,4 +39,4 @@ function TodoItem(props) {
   );
 }
 
-export default TodoItem;
+export default Item;

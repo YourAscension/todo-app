@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
-import todoActionsReducer from "../slices/TodoActions";
-import filterSliceReducer from "../slices/TodoFilter";
+import todoActionsReducer from "../slices/todo-actions";
+import filterSliceReducer from "../slices/todo-filter";
 
 export const store = configureStore({
   reducer: { todos: todoActionsReducer, filter: filterSliceReducer },

@@ -1,14 +1,12 @@
 import React from "react";
 import Input from "../../UI/Input/Input";
 import { searchIcon } from "../../../assets/icons/svgIcons";
-import styles from "./TodoFilter.module.css";
+import styles from "./Filter.module.css";
 import Checkbox from "../../UI/Checkbox/Checkbox";
-import ToolTip from "../../UI/ToolTip/ToolTip";
-import { useTooltip } from "../../../hooks/useTooltip";
 import { useDispatch, useSelector } from "react-redux";
-import { setSearch, setIsUncompleted } from "../../../slices/TodoFilter";
+import { setSearch, setIsUncompleted } from "../../../slices/todo-filter";
 
-function TodoFilter() {
+function Filter() {
   const dispatch = useDispatch();
   const { search, isUncompleted } = useSelector((state) => state.filter.filter);
 
@@ -27,4 +25,4 @@ function TodoFilter() {
   );
 }
 
-export default TodoFilter;
+export default Filter;

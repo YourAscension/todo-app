@@ -1,13 +1,20 @@
 import React from "react";
 import styles from "./Todo.module.css";
-import TodoList from "./TodoList/TodoList";
-import TodoStatistic from "./TodoStatistic/TodoStatistic";
+import List from "./List/List";
+import Statistic from "./Statistic/Statistic";
+import Filter from "./Filter/Filter";
+import Form from "./Form/Form";
 
 const Todo = () => {
   return (
     <div className={styles.todoContainer}>
-      <TodoList />
-      <TodoStatistic />
+      <div className={styles.todoContent}>
+        <Filter />
+        <hr />
+        <Form />
+        <List />
+      </div>
+      <Statistic />
     </div>
   );
 };

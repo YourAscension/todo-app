@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "./TodoStatistic.module.css";
+import styles from "./Statistic.module.css";
 import { doneIcon, importantIcon } from "../../../assets/icons/svgIcons";
 import { useSelector } from "react-redux";
 
-function TodoStatistic() {
+function Statistic() {
   const totalCount = useSelector((state) => state.filter.filteredTodos.length);
 
   const completedCount = useSelector((state) =>
@@ -30,4 +30,4 @@ function TodoStatistic() {
   );
 }
 
-export default TodoStatistic;
+export default Statistic;

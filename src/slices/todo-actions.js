@@ -13,6 +13,31 @@ const initialState = {
       task: "Купить еду",
       completed: true,
     },
+    {
+      id: uuid(),
+      task: "Купить еду",
+      completed: true,
+    },
+    {
+      id: uuid(),
+      task: "Купить еду",
+      completed: true,
+    },
+    {
+      id: uuid(),
+      task: "Купить еду",
+      completed: true,
+    },
+    {
+      id: uuid(),
+      task: "Купить еду",
+      completed: true,
+    },
+    {
+      id: uuid(),
+      task: "Купить еду",
+      completed: true,
+    },
   ],
 };
 

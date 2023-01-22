@@ -7,7 +7,7 @@ function ToolTip({ children, ...props }) {
   return isActive ? (
     <div
       className={[styles.tooltip, styles.bottom].join(" ")}
-      style={{ top: target.bottom + 2, left: target.x + target.width / 3 }}
+      style={{ top: target.bottom + 2, left: target.width * 2 }}
     >
       <div className={styles.tooltipArrow} />
       <div className={styles.tooltipLabel}>{children}</div>
