@@ -2,7 +2,7 @@ import React from "react";
 
 export const useSetPagination = (todos, current, totalPages) => {
   const [currentPage, setCurrentPage] = React.useState(current);
-  const [itemsPerPage, setItemsPerPage] = React.useState(totalPages);
+  const [itemsPerPage] = React.useState(totalPages);
 
   const lastItemIndex = currentPage * itemsPerPage;
   const firstItemIndex = lastItemIndex - itemsPerPage;

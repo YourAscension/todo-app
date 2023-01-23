@@ -4,10 +4,10 @@ import { doneIcon, importantIcon } from "../../../assets/icons/svgIcons";
 import { useSelector } from "react-redux";
 
 function Statistic() {
-  const totalCount = useSelector((state) => state.filter.filteredTodos.length);
+  const totalCount = useSelector((state) => state.persistedReducer.filters.filteredTodos.length);
 
   const completedCount = useSelector((state) =>
-    state.filter.filteredTodos.filter((todo) => todo.completed === true)
+    state.persistedReducer.filters.filteredTodos.filter((todo) => todo.completed === true)
   ).length;
   const uncompletedCount = totalCount - completedCount;
   return (

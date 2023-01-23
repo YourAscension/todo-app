@@ -12,22 +12,23 @@ function List() {
   const dispatch = useDispatch();
 
   const { search, isUncompleted, todos } = useSelector((state) => {
-    return { ...state.filter.filter, todos: state.todos.todosArray };
+    return {
+      ...state.persistedReducer.filters.filter,
+      todos: state.persistedReducer.todos.todosArray,
+    };
   });
 
   const filteredTodos = useSearchSortTodos(todos, isUncompleted, search);
 
   useEffect(() => {
     dispatch(setFilteredTodo(filteredTodos));
-  }, [todos, search, isUncompleted]);
+  }, [search, isUncompleted, todos]);
 
   const [currentItems, currentPage, itemsPerPage, setCurrentPage] = useSetPagination(
     filteredTodos,
     1,
     10
   );
-
-  console.log(itemsPerPage);
 
   const todosItems = currentItems.map((todo, index) => (
     <Item key={todo.id} index={itemsPerPage * (currentPage - 1) + index} todo={todo} />

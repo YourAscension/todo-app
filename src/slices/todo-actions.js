@@ -2,43 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import uuid from "react-uuid";
 
 const initialState = {
-  todosArray: [
-    {
-      id: uuid(),
-      task: "Купить молока",
-      completed: false,
-    },
-    {
-      id: uuid(),
-      task: "Купить еду",
-      completed: true,
-    },
-    {
-      id: uuid(),
-      task: "Купить еду",
-      completed: true,
-    },
-    {
-      id: uuid(),
-      task: "Купить еду",
-      completed: true,
-    },
-    {
-      id: uuid(),
-      task: "Купить еду",
-      completed: true,
-    },
-    {
-      id: uuid(),
-      task: "Купить еду",
-      completed: true,
-    },
-    {
-      id: uuid(),
-      task: "Купить еду",
-      completed: true,
-    },
-  ],
+  todosArray: [],
 };
 
 export const todoActionsSlice = createSlice({
@@ -52,11 +16,9 @@ export const todoActionsSlice = createSlice({
       ];
     },
     deleteTodo: (state, action) => {
-      console.log("deleted");
-      state.todosArray = state.todosArray.filter((todo) => todo.id != action.payload);
+      state.todosArray = state.todosArray.filter((todo) => todo.id !== action.payload);
     },
     toggleTodoCompleted: (state, action) => {
-      console.log("toggle");
       state.todosArray = state.todosArray.map((todo) => {
         return todo.id === action.payload ? { ...todo, completed: !todo.completed } : todo;
       });

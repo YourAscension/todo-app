@@ -4,11 +4,11 @@ const useTooltip = (target, time) => {
   const [isActive, setActive] = React.useState("");
   const [coords, setCoords] = React.useState({});
 
-  const showTooltip = () => {
+  const showTooltip = async () => {
     setCoords(target.current.getBoundingClientRect());
     setActive(true);
     target.current.focus();
-    setTimeout(() => setActive(false), time);
+    await setTimeout(() => setActive(false), time);
   };
   return [isActive, coords, showTooltip];
 };

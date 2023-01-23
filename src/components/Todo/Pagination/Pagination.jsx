@@ -23,7 +23,6 @@ function Pagination(props) {
       {">"}
     </button>
   );
-  console.log(pageNumbers);
   const pageButtons = pageNumbers.map((pageNumber) => {
     return (
       <button

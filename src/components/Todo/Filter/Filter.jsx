@@ -8,7 +8,7 @@ import { setSearch, setIsUncompleted } from "../../../slices/todo-filter";
 
 function Filter() {
   const dispatch = useDispatch();
-  const { search, isUncompleted } = useSelector((state) => state.filter.filter);
+  const { search, isUncompleted } = useSelector((state) => state.persistedReducer.filters.filter);
 
   return (
     <form onSubmit={(e) => e.preventDefault()} className={styles.filterForm}>
